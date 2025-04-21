@@ -10,16 +10,26 @@ public class BodySegment {
 	private Color color;
 	
 	public BodySegment(double x, double y, double size) {
-		//FIXME
+		this.x = x;
+		this.y = y;
+		this.size = size;
 		
-		//See ColorUtils for some color options (or choose your own)
+		this.color = ColorUtils.snakeColor();				
 	}
 	
 	/**
 	 * Draws the segment
 	 */
 	public void draw() {
-		//FIXME
+		StdDraw.setPenColor(ColorUtils.snakeHeadColor());
+		StdDraw.filledCircle(x, y, size);
 	}
+
+	public double getX() {
+		return x;
+	}	
 	
+	public double getY() {
+		return y;
+	}
 }
